@@ -1,0 +1,107 @@
+<div class="cardPosts">
+
+  <!--Information cards-->
+
+  <img class="imgCard" src="{{img.url}}" />
+  <div class="cardInfoContent">
+
+    <p>
+      Title : {{img.title}}
+    </p>
+
+    <p>
+      URL image : {{img.url}}
+    </p>
+
+    <p>
+      Category: {{img.categorie}}
+    </p>
+
+    <p>
+      Description: {{img.description}}
+    </p>
+
+    <p>
+      Post created on : {{img.date | date : 'dd-MM-yyyy'}}
+    </p>
+
+    <div>
+      <p>Comments: </p>
+      <ul *ngFor="let com of comment">
+        <li>{{com}}</li>
+      </ul>
+
+    </div>
+
+    <!-- Buttons card-->
+    <div>
+      <button class="btnContainer" [disabled]="isBtnCommentClicked" mat-button (click)="onAddComment()">+ Add a
+        comment</button>
+      <button class="btnContainer" [disabled]="isUpdateClicked" mat-button (click)="onUpdatePost()">Update</button>
+      <button class="btnContainer" mat-button (click)="onDeletePost()">Delete</button>
+    </div>
+
+    <div class="btnCntr">
+      <button class="buttonBtnCntr" (click)="refresh()">Close</button>
+    </div>
+
+    <!--On click make an update of image-->
+    <div *ngIf="isUpdateClicked === true" class="contentUpdateForm">
+      <mat-card class="infoUpdateForm">
+
+        <form class="formEdit" [formGroup]="imageForm" (ngSubmit)="onSubmit(imageForm.value)">
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Title: </mat-label>
+            <input matInput defaultValue="{{img.title}}" formControlName="title">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Url of image: </mat-label>
+            <input matInput value="{{img.url}}" formControlName="url">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Category: </mat-label>
+            <mat-select class="selection" formControlName="category">
+              <mat-option value="food">Food</mat-option>
+              <mat-option value="travel">Travel</mat-option>
+              <mat-option value="quotes">Quotes</mat-option>
+            </mat-select>
+            <input matInput value="{{img.categorie}}">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Description: </mat-label>
+            <input matInput value="{{img.description}}" formControlName="description">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Post updated on: </mat-label>
+            <input matInput value="{{img.date}}" formControlName="date">
+          </mat-form-field>
+
+          <button class="buttonSave" type="submit" title="saveInfo" mat-icon-button [disabled]="!imageForm.valid">
+            <mat-icon (click)="refresh()">Save</mat-icon>
+          </button>
+        </form>
+      </mat-card>
+    </div>
+
+    <!--On click add a comment-->
+
+    <div *ngIf="isBtnCommentClicked === true" class="contentUpdateForm" (click)="onAddComment()">
+
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Add a comment</mat-label>
+          <input class="inputComment" matInput placeholder="Comment something..." [formControl]="commentAdd" required>
+          <mat-error *ngIf="commentAdd.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+
+      <br>
+      <button class="buttonSave" type="submit" title="saveInfo" mat-icon-button>
+        <mat-icon (click)="onSubmitForm()">Save</mat-icon>
+      </button>
+    </div>

@@ -1,0 +1,135 @@
+.imgCard {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.cardInfoContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width:40%;
+    height: 40%;
+    background-color: #b4dfe5;
+    color: white;
+    border: solid;
+    border-color: lavender;
+    border-style:unset;
+    font-size: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-style: normal;
+    cursor:pointer;
+}
+
+.btnBack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width:20%;
+    height: 20%;
+    background-color: #b4dfe5;
+    color: white;
+    border: solid;
+    border-color: lavender;
+    border-style:unset;
+    font-size: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-style: normal;
+    cursor:pointer;
+}
+
+.infoUpdateForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.formEdit {
+    display: flex;
+    flex-direction: column;
+}
+
+.btnCntr .buttonBtnCntr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width:10%;
+    height: 10%;
+    background-color: red;
+    color: white;
+    border: solid;
+    border-color: lavender;
+    border-style:unset;
+    font-size: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-style: normal;
+    cursor:pointer;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+.example-full-width {
+    width: 100%;
+  }
+
+
+button:active {
+    transform: translateY(4px);
+  }
+
+.buttonSave {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width:10%;
+    height: 10%;
+    background-color: red;
+    color: white;
+    border: solid;
+    border-color: lavender;
+    border-style:unset;
+    font-size: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-style: normal;
+    cursor:pointer;
+}
+
+

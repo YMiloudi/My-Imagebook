@@ -1,0 +1,43 @@
+a,
+a:visited {
+  color: #00376b;
+  color: rgba(var(--fe0, 0, 55, 107), 1);
+  text-decoration: none;
+}
+
+.navbar-brand{
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  margin-left: 30px;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 20px;
+  background-color: #F4976C;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: solid;
+  border-color:lavender;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.contactMe {
+  color: white;
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-right: 20px;
+  font-size: large;
+}

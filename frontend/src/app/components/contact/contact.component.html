@@ -1,0 +1,33 @@
+<div>
+
+    <div class="container">
+       <div class="svg" id="svg"></div>
+       <button>Send e-mail !</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js" integrity="sha512-srGxQe2w7s50+5/nNgEVKYtBm15zRylJwdjxYnGEZr3mmHFJKFjA/ImA2OKizVzoIDX8XISMHDI1+az9pnumbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+
+        const svgContainer = document.getElementById('svg')
+
+        const animItem = bodyMovin.loadAnimation({
+            wrapper: svgContainer,
+            animType: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://assets2.lottiefiles.com/packages/lf20_bp1bwvhv.json'
+        })
+    </script>
+
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+   <!-- <h2 className='contact'>If you have any question or the intention to be part of the RAN'DON team, please contact us.
+        Cheers ! </h2>
+
+    <a className='link' href="mailto:yousra.miloudi@intuitim.com">yousra.miloudi@intuitim.com</a>-->
+
+
+</div>

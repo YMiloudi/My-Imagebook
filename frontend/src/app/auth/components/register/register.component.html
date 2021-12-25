@@ -1,0 +1,37 @@
+<div class="row" class="containerLogin">
+    <div class="col-md-6 offset-md-3 mt-4">
+        <h3>Register new user</h3>
+
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label for="registerUsername">Username</mat-label>
+                <input type="text" id="registerUsername" matInput placeholder="Enter Username" [formControl]="email"
+                    required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label for="registerEmail">Email</mat-label>
+                <input type="text" id="registerEmail" matInput placeholder="Enter Email" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label for="registerPassword">Password</mat-label>
+                <input id="registerPassword" matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                </button>
+            </mat-form-field>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">
+            Register <i class="fas fa-sign-in-alt"></i>
+        </button>
+    </div>
+</div>

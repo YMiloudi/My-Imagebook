@@ -1,0 +1,52 @@
+
+<!--Filtering images by category-->
+<div class="btnsContainer">
+  <div class="buttonContainer">
+    <mat-form-field class="menuContainer">
+      <mat-label class="contain">Images by category</mat-label>
+      <mat-select>
+        <mat-option class="basic-container" *ngFor="let categorie of categories" [value]="categorie.value"
+          (click)="onBtnClicked(categorie)">
+          {{categorie.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+<!--On click show deleted images-->
+  <div class="containerHeader">
+    <div class="input-group">
+      <h4>Show deleted images :</h4>
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <input type="checkbox" aria-label="Radio button for following text input" (click)=isActive($event) >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--List of posts-->
+
+<div class="postContainer">
+  <mat-card class="cardPosts" *ngFor="let image of img; let idx = index ;" (click)="onClickImage(idx)">
+    <mat-card-header>
+      <div mat-card-avatar class="card-header-image"></div>
+      <mat-card-title class="titleContainer">{{image.title}}</mat-card-title>
+
+    </mat-card-header>
+    <img class="imgContainer" mat-card-image src={{image.url}} alt={{image.title}}>
+
+    <mat-card-content>
+
+      <p>
+        {{image.description}}
+      </p>
+
+      <p>
+        {{image.date | date : 'dd-MM-yyyy'}}
+      </p>
+
+    </mat-card-content>
+  </mat-card>
+</div>

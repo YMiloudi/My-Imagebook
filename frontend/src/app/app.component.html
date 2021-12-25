@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<br>
+
+<div class="container">
+  <router-outlet></router-outlet>
+
+  <app-aboutme></app-aboutme>
+  <div class="btnAddImg">
+    <button mat-button (click)="openDialog()">+ Add an image</button>
+  </div>
+
+  <app-postImages-list></app-postImages-list>
+
+  <!--Form posts-->
+  <app-footer></app-footer>
+
+</div>
+
+<!--Affichage des differents composants-->

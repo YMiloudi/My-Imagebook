@@ -1,0 +1,28 @@
+.basic-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  margin-right: 100px;
+  margin-top: 20px;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #303C6C;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 130%;
+  border: solid;
+  border-color: lavender;
+  border-style:unset;
+  font-size: 15px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  cursor:pointer;
+}

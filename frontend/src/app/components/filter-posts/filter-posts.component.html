@@ -1,0 +1,19 @@
+<div class="basic-container">
+    <span *ngFor="let item of navItems">
+      <!-- Handle branch node buttons here -->
+      <span *ngIf="item.children && item.children.length > 0">
+        <button class = "menuContainer" mat-raised-button color="primary" [matMenuTriggerFor]="menu.childMenu">
+          {{item.displayName}}
+          <mat-icon></mat-icon>
+        </button>
+        <app-menu-item #menu [items]="item.children"></app-menu-item>
+      </span>
+      <!-- Leaf node buttons here -->
+      <span *ngIf="!item.children || item.children.length === 0">
+        <button mat-button color="primary" [routerLink]="item.route">
+          {{item.displayName}}
+        </button>
+      </span>
+    </span>
+  </div>
+  

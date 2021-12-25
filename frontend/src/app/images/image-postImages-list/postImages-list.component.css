@@ -1,0 +1,64 @@
+.postContainer{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.containerHeader {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start
+}
+
+
+.cardPosts {
+    max-width: 400px;
+    background-color:#F2F2F2;
+    color: black;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    font-size: large;
+  }
+
+  
+.imgContainer {
+    max-width: 345;
+    min-width: 100;
+    margin: "2rem",  
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #303C6C;
+  color: white;
+  text-align: center;
+  width: 30%;
+  height: 30%;
+  border: solid;
+  border-color: lavender;
+  border-style:unset;
+  font-size: 15px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding-top: 3px;
+  margin-top: 20px;
+  padding-bottom: 3px;
+  cursor:pointer;
+}
+
+  
+
+
